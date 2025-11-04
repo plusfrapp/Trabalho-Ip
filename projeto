@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-
 void multiplicacao( int * entrada1, int * entrada2, int * saida);                //função 3
 void xor_bits( int * entrada1, int * entrada2, int tam, int * saida);            //função 10
-void maximo( int * entrada1, int * entrada2, int * saida);
+void maximo( int * entrada1, int * entrada2, int * saida);                       //função 17
+void menor_igual( int * entrada1, int * entrada2, int * saida);                  //função 24
 
 int main (){
 
@@ -39,6 +39,27 @@ void menor_igual( int * entrada1, int * entrada2, int * saida){
     else * saida = 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 int calc_delta( int * entradaA, int * entradaB, int * entradaC, int * delta){
 
     int dlt;
@@ -61,25 +82,4 @@ int calc_delta( int * entradaA, int * entradaB, int * entradaC, int * delta){
         printf("delta positivo, raízes diferentes\n");
         return 1;
     }
-}
-
-void baskara( int * entradaA, int * entradaB, int * entradaC,int * delta, int * x1, int * x2 ){
-
-    int dlt;
-    dlt = calc_delta;
-    if ( dlt == -1 );
-
-    printf("-%d +- √%d\n___________\n   2 * %d\n", * entradaB, * delta, * entradaA);
-    printf("-%d +- %d\n___________\n    %d\n", * entradaB, sqrt(* delta), 2 * ( * entradaA));
-    if ( dlt == 0 ){
-
-    } else if ( dlt == 1 ){
-
-    }
-}
-
-
-
-int main(){
-    return 0;
 }
