@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 void multiplicacao( int * entrada1, int * entrada2, int * saida);                //função 3
-void xor_bits( int * entrada1, int * entrada2, int tam, int * saida);            //função 10
-void maximo( int * entrada1, int * entrada2, int * saida);                       //função 17
-void menor_igual( int * entrada1, int * entrada2, int * saida);                  //função 24
 void fatoracao(int * entrada1, int * saida);                                     //função 7
+void xor_bits( int * entrada1, int * entrada2, int tam, int * saida);            //função 10
 void s_intervalo( int * entrada1, int * entrada2, long long int * saida);        //função 14
+void maximo( int * entrada1, int * entrada2, int * saida);                       //função 17
 void maiorq( int * entrada1, int * entrada2, int * saida);                       //função 21
+void menor_igual( int * entrada1, int * entrada2, int * saida);                  //função 24
 void nor( int * entrada1, int * entrada2, int * saida);                          //função 28
 
 int main (){
@@ -15,11 +15,23 @@ int main (){
 }
 
 
-
+//3
 void multiplicacao( int * entrada1, int * entrada2, int * saida){
 
     * saida = ( * entrada1) * ( * entrada2);
 }
+
+//7
+void fatoracao(int * entrada1, int * saida){
+    
+    int i;
+    *saida=1;
+    
+    for(i=1;i<*entrada1;i++) *saida*=i;
+    
+}
+
+//10
 
 void xor_bits( int * entrada1, int * entrada2, int tam, int * saida){
 
@@ -31,26 +43,7 @@ void xor_bits( int * entrada1, int * entrada2, int tam, int * saida){
     } 
 }
 
-void maximo( int * entrada1, int * entrada2, int * saida){
-
-    if ( * entrada1 > * entrada2 ) * saida = * entrada1;
-    else * saida = * entrada2;
-}
-
-void menor_igual( int * entrada1, int * entrada2, int * saida){
-
-    if ( * entrada1 <= * entrada2 ) * saida = 1;
-    else * saida = 0;
-}
-
-void fatoracao(int * entrada1, int * saida){
-    
-    int i;
-    *saida=1;
-    
-    for(i=1;i<*entrada1;i++) *saida*=i;
-    
-}
+//14
 
 void s_intervalo( int * entrada1, int * entrada2, long long int * saida){
 
@@ -66,12 +59,31 @@ void s_intervalo( int * entrada1, int * entrada2, long long int * saida){
 
 }
 
+//17
+
+void maximo( int * entrada1, int * entrada2, int * saida){
+
+    if ( * entrada1 > * entrada2 ) * saida = * entrada1;
+    else * saida = * entrada2;
+}
+
+//21
 void maiorq( int * entrada1, int * entrada2, int * saida){
 
     if(*entrada1>*entrada2)*saida=1;
     else *saida=0;
 
 }
+
+//24
+
+void menor_igual( int * entrada1, int * entrada2, int * saida){
+
+    if ( * entrada1 <= * entrada2 ) * saida = 1;
+    else * saida = 0;
+}
+
+//28
 
 void nor( int * entrada1, int * entrada2, int * saida){
 
